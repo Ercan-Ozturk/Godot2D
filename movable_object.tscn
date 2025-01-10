@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://movable_object.gd" id="1_p4nto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_si2n3"]
-size = Vector2(8, 8)
+size = Vector2(7.9, 7.9)
 
 [sub_resource type="Gradient" id="Gradient_50whc"]
 
@@ -20,6 +20,7 @@ cull_mode = 2
 polygon = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 
 [node name="RigidBody2D" type="CharacterBody2D"]
+collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_p4nto")
 
@@ -28,6 +29,7 @@ shape = SubResource("RectangleShape2D_si2n3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 2
+z_index = 1
 texture_filter = 1
 texture = SubResource("GradientTexture2D_d73ml")
 
